@@ -1,0 +1,11 @@
+services:
+  iris:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: --check-caps false --ISCAgent false
+    ports:
+      - 41773:1972
+      - 42773:52773
+    volumes:
+      - ./:/home/irisowner/dev
